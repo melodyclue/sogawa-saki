@@ -1,101 +1,149 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTiktok, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
+
+const images = [
+  {
+    src: '/sogawasaki/sogawa-saki-1.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1822460153935073549',
+  },
+  {
+    src: '/sogawasaki/sogawa-saki-2.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1804478476537540634',
+  },
+  {
+    src: '/sogawasaki/sogawa-saki-3.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1804265807884750933',
+  },
+  {
+    src: '/sogawasaki/sogawa-saki-4.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1797778961654747269',
+  },
+  {
+    src: '/sogawasaki/sogawa-saki-5.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1787493379431190865',
+  },
+  {
+    src: '/sogawasaki/sogawa-saki-6.jpeg',
+    link: 'https://x.com/sogawa_saki/status/1838732163543634276',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div>
+      <div className="max-w-screen-lg mx-auto px-5 pt-8 md:pt-12">
+        <div className="md:flex items-center justify-center gap-4">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://sp.stu48.com/feature/sogawa_saki_fs"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="h-[120px] w-[120px] cursor-pointer overflow-hidden rounded-full inline-block"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <img loading="eager" alt="avatar" src="/saki.png" width="120" height="120" />
           </a>
+          <div className="mt-6">
+            <div className="text-xs md:text-sm font-medium text-slate-500">STU48 3rd gen</div>
+            <h1 className="mb-4 mt-1 text-2xl md:text-4xl font-bold text-slate-800">Sogawa Saki</h1>
+            <p className="text-sm md:text-md text-slate-600 leading-6">
+              STU48 曽川咲葵（そがわさき）と申します ！<br />
+              山口県出身/19歳
+            </p>
+          </div>
+        </div>
+
+        <div className="flex justify-center flex-wrap gap-4 flex-start mt-12">
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://x.com/sogawa_saki"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
           >
-            Read our docs
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/sogawa_saki/"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-3xl bg-white transition-colors ease-in-out border inline-block relative"
+          >
+            <div className="absolute -top-2 -right-2 bg-rose-500 text-rose-100 text-xs px-2 py-1 rounded-full">New</div>
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faInstagram} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=Fn41Spu0kKk"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
+          >
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faYoutube} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.showroom-live.com/r/48_SOGAWA_SAKI"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
+          >
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faPlay} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@stu48.official/video/7432225498102516999?is_from_webapp=1&sender_device=pc&web_id=7416683383919429127"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
+          >
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faTiktok} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 w-full mt-12 pb-4">
+          {images.map((image, index) => (
+            <a
+              key={image.link}
+              href={image.link}
+              target="_blank"
+              rel="noreferrer"
+              className="h-[350px] bg-slate-200 rounded-lg"
+            >
+              <figure className="h-full w-full">
+                <Image
+                  loading="eager"
+                  alt="sogawa saki"
+                  src={image.src}
+                  width="520"
+                  height="520"
+                  className="object-cover w-full h-full object-top"
+                />
+              </figure>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
