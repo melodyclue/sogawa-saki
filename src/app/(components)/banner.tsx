@@ -10,12 +10,12 @@ export const AnnouncementBanner = () => {
       <div className="overflow-hidden rounded-xl group bg-white border">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:w-2/5 lg:w-1/3 overflow-hidden">
-            <Image
+            <img
               src="/11th-sogawa-saki.jpeg"
               alt="STU48 11th Single Sogawa Saki"
               className="h-full w-full object-cover overflow-hidden group-hover:scale-105 transition-all duration-300"
-              width={1000}
-              height={1000}
+              width={720}
+              height={720}
             />
           </div>
 
