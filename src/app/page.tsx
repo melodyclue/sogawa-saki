@@ -67,7 +67,7 @@ export default function Home() {
       <div className="max-w-screen-lg mx-auto px-5 pt-10 md:pt-20">
         <div className="flex items-center justify-between w-full my-8 px-4">
           <span className="h-[1px] flex-1 bg-slate-200" />
-          <h2 className="text-center text-lg font-medium px-8 tracking-[0.2em]">LINKS</h2>
+          <h2 className="text-center text-base md:text-lg font-medium px-8 tracking-[0.2em]">LINKS</h2>
           <span className="h-[1px] flex-1 bg-slate-200" />
         </div>
         <div className="flex justify-center flex-wrap gap-4 flex-start mt-12">
@@ -142,7 +142,7 @@ export default function Home() {
       <section className="max-w-screen-lg mx-auto px-5 pt-10 md:pt-16">
         <div className="flex items-center justify-between w-full my-8 px-4">
           <span className="h-[1px] flex-1 bg-slate-200" />
-          <h2 className="text-center text-lg font-medium px-8 tracking-[0.2em]">PHOTOS</h2>
+          <h2 className="text-center text-base md:text-lg font-medium px-8 tracking-[0.2em]">PHOTOS</h2>
           <span className="h-[1px] flex-1 bg-slate-200" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 w-full mt-12 pb-4">
