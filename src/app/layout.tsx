@@ -1,12 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-import { Noto_Sans_JP } from 'next/font/google';
-
-const noto = Noto_Sans_JP({
-  subsets: ['latin'],
-});
-
 export const metadata: Metadata = {
   title: 'Sogawa Saki | STU48 3rd gen Links',
   description: 'Sogawa Saki STU48 3rd gen Links',
@@ -18,8 +12,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${noto.className} `}>
+    <html lang="ja">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
         <div className="bg-gradient-to-br from-indigo-50/50 to-pink-50/50 grid grid-rows-[1fr_auto] grid-cols-[100%] min-h-screen">
           {children}
           <footer className="text-center text-sm text-slate-500 py-1 sr-only">

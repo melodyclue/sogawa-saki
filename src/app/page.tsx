@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import { AnnouncementBanner } from './(components)/banner';
 
 const images = [
   {
@@ -33,26 +34,42 @@ const images = [
 export default function Home() {
   return (
     <div>
-      <div className="max-w-screen-lg mx-auto px-5 pt-8 md:pt-12">
-        <div className="md:flex items-center justify-center gap-4">
-          <a
-            href="https://sp.stu48.com/feature/sogawa_saki_fs"
-            target="_blank"
-            rel="noreferrer"
-            className="h-[120px] w-[120px] cursor-pointer overflow-hidden rounded-full inline-block"
-          >
-            <img loading="eager" alt="avatar" src="/saki.png" width="120" height="120" />
-          </a>
-          <div className="mt-6">
-            <div className="text-xs md:text-sm font-medium text-slate-500">STU48 3rd gen</div>
-            <h1 className="mb-4 mt-1 text-2xl md:text-4xl font-bold text-slate-800">Sogawa Saki</h1>
-            <p className="text-sm md:text-md text-slate-600 leading-6">
-              STU48 曽川咲葵（そがわさき）と申します ！<br />
-              山口県出身/19歳
-            </p>
-          </div>
+      <div className="md:flex items-center justify-center gap-4 md:mt-4 px-5 md:px-0">
+        <a
+          href="https://sp.stu48.com/feature/sogawa_saki_fs"
+          target="_blank"
+          rel="noreferrer"
+          className="h-[120px] w-[120px] cursor-pointer overflow-hidden rounded-full hidden md:inline-block"
+        >
+          <Image
+            loading="eager"
+            alt="avatar"
+            src="/11th-sogawa-saki.jpeg"
+            width="120"
+            height="120"
+            className="object-cover object-left-top"
+          />
+        </a>
+        <div className="mt-6">
+          <div className="text-xs md:text-sm font-medium text-slate-500">STU48 3rd gen</div>
+          <h1 className="mb-4 mt-1 text-3xl md:text-4xl font-bold text-slate-800">Sogawa Saki</h1>
+          <p className="text-sm md:text-md text-slate-700 leading-6">
+            STU48 曽川咲葵（そがわさき）と申します ！<br />
+            山口県出身/19歳
+          </p>
         </div>
+      </div>
 
+      <section className="max-w-screen-lg mx-auto px-5 pt-4 md:pt-16">
+        <AnnouncementBanner />
+      </section>
+
+      <div className="max-w-screen-lg mx-auto px-5 pt-10 md:pt-20">
+        <div className="flex items-center justify-between w-full my-8 px-4">
+          <span className="h-[1px] flex-1 bg-slate-200" />
+          <h2 className="text-center text-lg font-medium px-8 tracking-[0.2em]">LINKS</h2>
+          <span className="h-[1px] flex-1 bg-slate-200" />
+        </div>
         <div className="flex justify-center flex-wrap gap-4 flex-start mt-12">
           <a
             href="https://x.com/sogawa_saki"
@@ -120,7 +137,14 @@ export default function Home() {
             </div>
           </a>
         </div>
+      </div>
 
+      <section className="max-w-screen-lg mx-auto px-5 pt-10 md:pt-16">
+        <div className="flex items-center justify-between w-full my-8 px-4">
+          <span className="h-[1px] flex-1 bg-slate-200" />
+          <h2 className="text-center text-lg font-medium px-8 tracking-[0.2em]">PHOTOS</h2>
+          <span className="h-[1px] flex-1 bg-slate-200" />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 w-full mt-12 pb-4">
           {images.map((image, index) => (
             <a
@@ -143,7 +167,7 @@ export default function Home() {
             </a>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
