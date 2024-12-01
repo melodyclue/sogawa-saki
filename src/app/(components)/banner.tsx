@@ -33,7 +33,7 @@ export const AnnouncementBanner = () => {
           <div className="grid grid-cols-1 gap-2 mt-8 mb-6">
             <div className="flex items-center gap-2 text-slate-800">
               <FontAwesomeIcon icon={faCalendar} className="w-4 h-4 shrink-0 tracking-wide" />
-              <span className="text-sm">2024年1月15日(水)発売</span>
+              <span className="text-sm">2025年1月15日(水)発売</span>
             </div>
             <div className="flex items-center gap-2 text-slate-800">
               <FontAwesomeIcon icon={faUser} className="w-4 h-4 shrink-0" />
