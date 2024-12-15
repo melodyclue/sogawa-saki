@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faPlay, faStar, faSun } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import { AnnouncementBanner } from './(components)/banner';
 
@@ -71,6 +71,19 @@ export default function Home() {
           <span className="h-[1px] flex-1 bg-slate-200" />
         </div>
         <div className="flex justify-center flex-wrap gap-4 flex-start mt-12">
+          <a
+            href="https://sogawasaki.official-fc.site"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
+          >
+            <div className="px-8 py-6">
+              <div className="flex items-center justify-center gap-4">
+                <FontAwesomeIcon icon={faLink} size="lg" className="text-slate-700 w-8 h-8" />
+              </div>
+            </div>
+          </a>
+
           <a
             href="https://x.com/sogawa_saki"
             target="_blank"
