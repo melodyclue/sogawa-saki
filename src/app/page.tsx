@@ -138,7 +138,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.tiktok.com/@stu48.official/video/7432225498102516999?is_from_webapp=1&sender_device=pc&web_id=7416683383919429127"
+            href="https://www.tiktok.com/@sakisogawa"
             target="_blank"
             rel="noreferrer"
             className="rounded-3xl bg-white overflow-hidden transition-colors ease-in-out border inline-block"
